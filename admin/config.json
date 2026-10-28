@@ -1270,5 +1270,10 @@
         }
       ]
     }
-  ]
+  ],
+  "media_libraries": {
+    "all": {
+      "slugify_filename": true
+    }
+  }
 }
