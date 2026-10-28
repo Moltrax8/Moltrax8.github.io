@@ -1,0 +1,1405 @@
+{
+  "app_title": "Moltrax · Site editor",
+  "backend": {
+    "name": "github",
+    "repo": "Moltrax8/moltrax-site",
+    "branch": "main",
+    "auth_methods": [
+      "token"
+    ]
+  },
+  "site_url": "https://moltrax8.github.io",
+  "logo": {
+    "src": "/favicon.svg"
+  },
+  "media_folder": "/public/images",
+  "public_folder": "/images",
+  "output": {
+    "omit_empty_optional_fields": false
+  },
+  "slug": {
+    "encoding": "ascii",
+    "clean_accents": true,
+    "sanitize_replacement": "-",
+    "lowercase": true
+  },
+  "collections": [
+    {
+      "name": "site_text",
+      "label": "Pages, text & appearance",
+      "files": [
+        {
+          "name": "site",
+          "label": "Site settings, menus & colors",
+          "file": "/src/data/editable/site.json",
+          "format": "json",
+          "preview_path": "/",
+          "fields": [
+            {
+              "name": "siteName",
+              "label": "Site Name",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "brandText",
+              "label": "Brand Text",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "siteTitle",
+              "label": "Site Title",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "required": false,
+              "widget": "text"
+            },
+            {
+              "name": "githubUrl",
+              "label": "Github Url",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "telegramUrl",
+              "label": "Telegram Url",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "telegramHandle",
+              "label": "Telegram Handle",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "headerActionLabel",
+              "label": "Header Action Label",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "footerTagline",
+              "label": "Footer Tagline",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "footerCopyright",
+              "label": "Footer Copyright",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "showFooter",
+              "label": "Show Footer",
+              "required": false,
+              "widget": "boolean",
+              "default": true
+            },
+            {
+              "name": "showHeaderAction",
+              "label": "Show Header Action",
+              "required": false,
+              "widget": "boolean",
+              "default": true
+            },
+            {
+              "name": "backgroundColor",
+              "label": "Background Color",
+              "required": false,
+              "widget": "color"
+            },
+            {
+              "name": "panelColor",
+              "label": "Panel Color",
+              "required": false,
+              "widget": "color"
+            },
+            {
+              "name": "textColor",
+              "label": "Text Color",
+              "required": false,
+              "widget": "color"
+            },
+            {
+              "name": "primaryColor",
+              "label": "Primary Color",
+              "required": false,
+              "widget": "color"
+            },
+            {
+              "name": "accentColor",
+              "label": "Accent Color",
+              "required": false,
+              "widget": "color"
+            },
+            {
+              "name": "navigation",
+              "label": "Navigation",
+              "required": false,
+              "widget": "list",
+              "fields": [
+                {
+                  "name": "label",
+                  "label": "Label",
+                  "required": false,
+                  "widget": "string"
+                },
+                {
+                  "name": "href",
+                  "label": "Href",
+                  "required": false,
+                  "widget": "string"
+                }
+              ]
+            },
+            {
+              "name": "footerLinks",
+              "label": "Footer Links",
+              "required": false,
+              "widget": "list",
+              "fields": [
+                {
+                  "name": "label",
+                  "label": "Label",
+                  "required": false,
+                  "widget": "string"
+                },
+                {
+                  "name": "href",
+                  "label": "Href",
+                  "required": false,
+                  "widget": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "home",
+          "label": "Homepage",
+          "file": "/src/data/editable/home.json",
+          "format": "json",
+          "preview_path": "/",
+          "fields": [
+            {
+              "name": "showHero",
+              "label": "Show Hero",
+              "required": false,
+              "widget": "boolean",
+              "default": true
+            },
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "titleLine1",
+              "label": "Title Line1",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "titleAccent",
+              "label": "Title Accent",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "titleLine3",
+              "label": "Title Line3",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "required": false,
+              "widget": "text"
+            },
+            {
+              "name": "primaryButton",
+              "label": "Primary Button",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "secondaryButton",
+              "label": "Secondary Button",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "showStatistics",
+              "label": "Show Statistics",
+              "required": false,
+              "widget": "boolean",
+              "default": true
+            },
+            {
+              "name": "statQuestions",
+              "label": "Stat Questions",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "statCategories",
+              "label": "Stat Categories",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "showLatestChallengePanel",
+              "label": "Show Latest Challenge Panel",
+              "required": false,
+              "widget": "boolean",
+              "default": true
+            },
+            {
+              "name": "latestPanelLabel",
+              "label": "Latest Panel Label",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "latestPanelButton",
+              "label": "Latest Panel Button",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "showChallenges",
+              "label": "Show Challenges",
+              "required": false,
+              "widget": "boolean",
+              "default": true
+            },
+            {
+              "name": "challengesKicker",
+              "label": "Challenges Kicker",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "challengesTitle",
+              "label": "Challenges Title",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "challengesDescription",
+              "label": "Challenges Description",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "challengesButton",
+              "label": "Challenges Button",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "showCompetitions",
+              "label": "Show Competitions",
+              "required": false,
+              "widget": "boolean",
+              "default": true
+            },
+            {
+              "name": "competitionsKicker",
+              "label": "Competitions Kicker",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "competitionsTitle",
+              "label": "Competitions Title",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "competitionsButton",
+              "label": "Competitions Button",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "showProjects",
+              "label": "Show Projects",
+              "required": false,
+              "widget": "boolean",
+              "default": true
+            },
+            {
+              "name": "projectsKicker",
+              "label": "Projects Kicker",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "projectsTitle",
+              "label": "Projects Title",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "projectsDescription",
+              "label": "Projects Description",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "projectsButton",
+              "label": "Projects Button",
+              "required": false,
+              "widget": "string"
+            }
+          ]
+        },
+        {
+          "name": "about",
+          "label": "About & Contact",
+          "file": "/src/data/editable/about.json",
+          "format": "json",
+          "preview_path": "/about/",
+          "fields": [
+            {
+              "name": "showIntro",
+              "label": "Show Intro",
+              "required": false,
+              "widget": "boolean",
+              "default": true
+            },
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "intro",
+              "label": "Intro",
+              "required": false,
+              "widget": "text"
+            },
+            {
+              "name": "showInformationCards",
+              "label": "Show Information Cards",
+              "required": false,
+              "widget": "boolean",
+              "default": true
+            },
+            {
+              "name": "informationCards",
+              "label": "Information Cards",
+              "required": false,
+              "widget": "list",
+              "fields": [
+                {
+                  "name": "label",
+                  "label": "Label",
+                  "required": false,
+                  "widget": "string"
+                },
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "required": false,
+                  "widget": "string"
+                },
+                {
+                  "name": "description",
+                  "label": "Description",
+                  "required": false,
+                  "widget": "text"
+                },
+                {
+                  "name": "buttonText",
+                  "label": "Button Text",
+                  "required": false,
+                  "widget": "string"
+                },
+                {
+                  "name": "buttonUrl",
+                  "label": "Button Url",
+                  "required": false,
+                  "widget": "string"
+                }
+              ]
+            },
+            {
+              "name": "showAreas",
+              "label": "Show Areas",
+              "required": false,
+              "widget": "boolean",
+              "default": true
+            },
+            {
+              "name": "areasKicker",
+              "label": "Areas Kicker",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "areasTitle",
+              "label": "Areas Title",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "areas",
+              "label": "Areas",
+              "required": false,
+              "widget": "list",
+              "fields": [
+                {
+                  "name": "label",
+                  "label": "Label",
+                  "required": false,
+                  "widget": "string"
+                },
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "required": false,
+                  "widget": "string"
+                },
+                {
+                  "name": "description",
+                  "label": "Description",
+                  "required": false,
+                  "widget": "text"
+                }
+              ]
+            },
+            {
+              "name": "showContact",
+              "label": "Show Contact",
+              "required": false,
+              "widget": "boolean",
+              "default": true
+            },
+            {
+              "name": "contactEyebrow",
+              "label": "Contact Eyebrow",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "contactTitle",
+              "label": "Contact Title",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "contactDescription",
+              "label": "Contact Description",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "telegramButton",
+              "label": "Telegram Button",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "githubButton",
+              "label": "Github Button",
+              "required": false,
+              "widget": "string"
+            }
+          ]
+        },
+        {
+          "name": "projects_page",
+          "label": "Projects page text",
+          "file": "/src/data/editable/projects-page.json",
+          "format": "json",
+          "preview_path": "/projects/",
+          "fields": [
+            {
+              "name": "showIntro",
+              "label": "Show Intro",
+              "required": false,
+              "widget": "boolean",
+              "default": true
+            },
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "required": false,
+              "widget": "text"
+            },
+            {
+              "name": "emptyText",
+              "label": "Empty Text",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "cardDetailsButton",
+              "label": "Card Details Button",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "cardBotButton",
+              "label": "Card Bot Button",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "cardSourceButton",
+              "label": "Card Source Button",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "sourcePublicLabel",
+              "label": "Source Public Label",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "sourcePrivateLabel",
+              "label": "Source Private Label",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "privateProjectLabel",
+              "label": "Private Project Label",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "detailOverviewLabel",
+              "label": "Detail Overview Label",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "detailInformationLabel",
+              "label": "Detail Information Label",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "detailSourceLabel",
+              "label": "Detail Source Label",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "detailAccessLabel",
+              "label": "Detail Access Label",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "detailTechnologyLabel",
+              "label": "Detail Technology Label",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "detailFeaturesLabel",
+              "label": "Detail Features Label",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "detailFeaturesTitle",
+              "label": "Detail Features Title",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "detailBackButton",
+              "label": "Detail Back Button",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "detailBotButton",
+              "label": "Detail Bot Button",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "detailSourceButton",
+              "label": "Detail Source Button",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "sourcePublicValue",
+              "label": "Source Public Value",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "sourcePrivateValue",
+              "label": "Source Private Value",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "accessTelegramValue",
+              "label": "Access Telegram Value",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "accessGithubValue",
+              "label": "Access Github Value",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "accessOverviewValue",
+              "label": "Access Overview Value",
+              "required": false,
+              "widget": "string"
+            }
+          ]
+        },
+        {
+          "name": "ctf",
+          "label": "CTF page text",
+          "file": "/src/data/editable/ctf.json",
+          "format": "json",
+          "preview_path": "/ctf/",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "required": false,
+              "widget": "text"
+            },
+            {
+              "name": "showChallenges",
+              "label": "Show Challenges",
+              "required": false,
+              "widget": "boolean",
+              "default": true
+            },
+            {
+              "name": "challengesKicker",
+              "label": "Challenges Kicker",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "challengesTitle",
+              "label": "Challenges Title",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "repositoryButton",
+              "label": "Repository Button",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "searchPlaceholder",
+              "label": "Search Placeholder",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "categoryPlaceholder",
+              "label": "Category Placeholder",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "difficultyPlaceholder",
+              "label": "Difficulty Placeholder",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "questionsLabel",
+              "label": "Questions Label",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "noResults",
+              "label": "No Results",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "showCompetitions",
+              "label": "Show Competitions",
+              "required": false,
+              "widget": "boolean",
+              "default": true
+            },
+            {
+              "name": "competitionsKicker",
+              "label": "Competitions Kicker",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "competitionsTitle",
+              "label": "Competitions Title",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "competitionsDescription",
+              "label": "Competitions Description",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "emptyCompetitions",
+              "label": "Empty Competitions",
+              "required": false,
+              "widget": "string"
+            }
+          ]
+        },
+        {
+          "name": "blog_page",
+          "label": "Blog page text",
+          "file": "/src/data/editable/blog-page.json",
+          "format": "json",
+          "preview_path": "/blog/",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "required": false,
+              "widget": "text"
+            },
+            {
+              "name": "emptyText",
+              "label": "Empty Text",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "showRss",
+              "label": "Show Rss",
+              "required": false,
+              "widget": "boolean",
+              "default": true
+            },
+            {
+              "name": "rssPrompt",
+              "label": "Rss Prompt",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "rssButton",
+              "label": "Rss Button",
+              "required": false,
+              "widget": "string"
+            }
+          ]
+        },
+        {
+          "name": "community_page",
+          "label": "Community page text",
+          "file": "/src/data/editable/community-page.json",
+          "format": "json",
+          "preview_path": "/community/",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "required": false,
+              "widget": "text"
+            },
+            {
+              "name": "emptyText",
+              "label": "Empty Text",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "eventButton",
+              "label": "Event Button",
+              "required": false,
+              "widget": "string"
+            }
+          ]
+        },
+        {
+          "name": "search",
+          "label": "Search page text",
+          "file": "/src/data/editable/search.json",
+          "format": "json",
+          "preview_path": "/search/",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "required": false,
+              "widget": "text"
+            },
+            {
+              "name": "placeholder",
+              "label": "Placeholder",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "emptyPrompt",
+              "label": "Empty Prompt",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "loadingPrompt",
+              "label": "Loading Prompt",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "noResults",
+              "label": "No Results",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "errorText",
+              "label": "Error Text",
+              "required": false,
+              "widget": "string"
+            }
+          ]
+        },
+        {
+          "name": "not_found",
+          "label": "404 page text",
+          "file": "/src/data/editable/not-found.json",
+          "format": "json",
+          "preview_path": "/404.html",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "title",
+              "label": "Title",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "required": false,
+              "widget": "text"
+            },
+            {
+              "name": "button",
+              "label": "Button",
+              "required": false,
+              "widget": "string"
+            }
+          ]
+        },
+        {
+          "name": "competition_detail",
+          "label": "Competition detail labels",
+          "file": "/src/data/editable/competition-detail.json",
+          "format": "json",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "eventButton",
+              "label": "Event Button",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "photosKicker",
+              "label": "Photos Kicker",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "photosTitle",
+              "label": "Photos Title",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "certificateKicker",
+              "label": "Certificate Kicker",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "certificateFallback",
+              "label": "Certificate Fallback",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "certificateButton",
+              "label": "Certificate Button",
+              "required": false,
+              "widget": "string"
+            }
+          ]
+        },
+        {
+          "name": "blog_detail",
+          "label": "Blog detail labels",
+          "file": "/src/data/editable/blog-detail.json",
+          "format": "json",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Eyebrow",
+              "required": false,
+              "widget": "string"
+            },
+            {
+              "name": "backButton",
+              "label": "Back Button",
+              "required": false,
+              "widget": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "projects",
+      "label": "Projects (add, edit or remove)",
+      "label_singular": "Project",
+      "file": "/src/data/projects.json",
+      "identifier_field": "title",
+      "fields": [
+        {
+          "name": "slug",
+          "label": "URL slug (lowercase, hyphens)",
+          "widget": "string",
+          "required": true,
+          "pattern": [
+            "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "Use lowercase letters, numbers and hyphens"
+          ]
+        },
+        {
+          "name": "title",
+          "label": "Project title",
+          "widget": "string"
+        },
+        {
+          "name": "category",
+          "label": "Category",
+          "widget": "string"
+        },
+        {
+          "name": "summary",
+          "label": "Short description",
+          "widget": "text"
+        },
+        {
+          "name": "status",
+          "label": "Source visibility",
+          "widget": "select",
+          "options": [
+            {
+              "label": "Public source",
+              "value": "public"
+            },
+            {
+              "label": "Private source",
+              "value": "private"
+            }
+          ]
+        },
+        {
+          "name": "visible",
+          "label": "Show project on website",
+          "widget": "boolean",
+          "default": true
+        },
+        {
+          "name": "homepageFeatured",
+          "label": "Show on homepage",
+          "widget": "boolean",
+          "default": false
+        },
+        {
+          "name": "publicDetail",
+          "label": "Create project detail page even if source is private",
+          "widget": "boolean",
+          "default": false
+        },
+        {
+          "name": "githubUrl",
+          "label": "Public GitHub URL (leave empty for private code)",
+          "widget": "string",
+          "required": false
+        },
+        {
+          "name": "telegramUrl",
+          "label": "Telegram bot URL",
+          "widget": "string",
+          "required": false
+        },
+        {
+          "name": "image",
+          "label": "Project cover (optional)",
+          "widget": "image",
+          "required": false
+        },
+        {
+          "name": "imageAlt",
+          "label": "Cover image description",
+          "widget": "string",
+          "required": false
+        },
+        {
+          "name": "stack",
+          "label": "Technologies",
+          "widget": "list",
+          "required": false,
+          "field": {
+            "name": "item",
+            "widget": "string",
+            "label": "Text"
+          }
+        },
+        {
+          "name": "overview",
+          "label": "Overview paragraphs",
+          "widget": "list",
+          "required": false,
+          "field": {
+            "name": "item",
+            "widget": "string",
+            "label": "Text"
+          }
+        },
+        {
+          "name": "highlights",
+          "label": "Key features",
+          "widget": "list",
+          "required": false,
+          "field": {
+            "name": "item",
+            "widget": "string",
+            "label": "Text"
+          }
+        }
+      ]
+    },
+    {
+      "name": "community_events",
+      "label": "Community events",
+      "label_singular": "Event",
+      "file": "/src/data/community.json",
+      "identifier_field": "title",
+      "fields": [
+        {
+          "name": "id",
+          "label": "URL ID",
+          "widget": "string",
+          "required": true
+        },
+        {
+          "name": "title",
+          "label": "Event name",
+          "widget": "string",
+          "required": true
+        },
+        {
+          "name": "date",
+          "label": "Event date",
+          "widget": "datetime",
+          "type": "date",
+          "required": true
+        },
+        {
+          "name": "summary",
+          "label": "Description",
+          "widget": "text",
+          "required": true
+        },
+        {
+          "name": "image",
+          "label": "Event photo",
+          "widget": "image",
+          "required": false
+        },
+        {
+          "name": "imageAlt",
+          "label": "Image description",
+          "widget": "string",
+          "required": false
+        },
+        {
+          "name": "url",
+          "label": "Public event link",
+          "widget": "string",
+          "required": false
+        },
+        {
+          "name": "visible",
+          "label": "Publish event",
+          "widget": "boolean",
+          "default": true
+        }
+      ]
+    },
+    {
+      "name": "competitions",
+      "label": "CTF competitions",
+      "label_singular": "Competition",
+      "folder": "/src/content/competitions",
+      "create": true,
+      "slug": "{{slug}}",
+      "extension": "md",
+      "format": "frontmatter",
+      "identifier_field": "name",
+      "preview_path": "/competitions/{{slug}}/",
+      "fields": [
+        {
+          "name": "name",
+          "label": "Competition name",
+          "widget": "string"
+        },
+        {
+          "name": "startDate",
+          "label": "Start date",
+          "widget": "datetime",
+          "type": "date"
+        },
+        {
+          "name": "endDate",
+          "label": "End date",
+          "widget": "datetime",
+          "type": "date",
+          "required": false
+        },
+        {
+          "name": "team",
+          "label": "Team",
+          "widget": "string",
+          "required": false
+        },
+        {
+          "name": "placement",
+          "label": "Placement / rank",
+          "widget": "string",
+          "required": false
+        },
+        {
+          "name": "eventUrl",
+          "label": "Official event URL",
+          "widget": "string",
+          "required": false
+        },
+        {
+          "name": "summary",
+          "label": "Short description",
+          "widget": "text"
+        },
+        {
+          "name": "photos",
+          "label": "Event photos (optional)",
+          "widget": "list",
+          "required": false,
+          "fields": [
+            {
+              "name": "src",
+              "label": "Upload photo",
+              "widget": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Photo description",
+              "widget": "string"
+            },
+            {
+              "name": "caption",
+              "label": "Caption",
+              "widget": "string",
+              "required": false
+            }
+          ]
+        },
+        {
+          "name": "certificate",
+          "label": "Certificate (optional)",
+          "widget": "object",
+          "required": false,
+          "fields": [
+            {
+              "name": "url",
+              "label": "PDF, image or public URL",
+              "widget": "file"
+            },
+            {
+              "name": "label",
+              "label": "Certificate label",
+              "widget": "string",
+              "required": false
+            }
+          ]
+        },
+        {
+          "name": "draft",
+          "label": "Keep unpublished (draft)",
+          "widget": "boolean",
+          "default": true
+        },
+        {
+          "name": "body",
+          "label": "Experience and lessons learned",
+          "widget": "markdown",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "blog",
+      "label": "Blog posts",
+      "label_singular": "Blog post",
+      "folder": "/src/content/blog",
+      "create": true,
+      "slug": "{{slug}}",
+      "extension": "md",
+      "format": "frontmatter",
+      "identifier_field": "title",
+      "preview_path": "/blog/{{slug}}/",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "widget": "string"
+        },
+        {
+          "name": "description",
+          "label": "Description",
+          "widget": "text"
+        },
+        {
+          "name": "pubDate",
+          "label": "Publish date",
+          "widget": "datetime",
+          "type": "date"
+        },
+        {
+          "name": "tags",
+          "label": "Tags",
+          "widget": "list",
+          "required": false,
+          "field": {
+            "name": "tag",
+            "label": "Tag",
+            "widget": "string"
+          }
+        },
+        {
+          "name": "draft",
+          "label": "Keep unpublished (draft)",
+          "widget": "boolean",
+          "default": true
+        },
+        {
+          "name": "body",
+          "label": "Article",
+          "widget": "markdown"
+        }
+      ]
+    }
+  ]
+}
