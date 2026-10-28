@@ -692,6 +692,57 @@
           ]
         },
         {
+          "name": "competitions_page",
+          "label": "Competitions page",
+          "file": "/src/data/editable/competitions-page.json",
+          "format": "json",
+          "preview_path": "/competitions/",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Small heading",
+              "widget": "string",
+              "required": false
+            },
+            {
+              "name": "title",
+              "label": "Page title",
+              "widget": "string",
+              "required": false
+            },
+            {
+              "name": "description",
+              "label": "Page introduction (optional)",
+              "widget": "text",
+              "required": false
+            },
+            {
+              "name": "teamLabel",
+              "label": "Team label",
+              "widget": "string",
+              "required": false
+            },
+            {
+              "name": "placementLabel",
+              "label": "Placement label",
+              "widget": "string",
+              "required": false
+            },
+            {
+              "name": "detailsLabel",
+              "label": "Details link label",
+              "widget": "string",
+              "required": false
+            },
+            {
+              "name": "emptyText",
+              "label": "Message when no competitions (optional)",
+              "widget": "string",
+              "required": false
+            }
+          ]
+        },
+        {
           "name": "ctf",
           "label": "CTF page text",
           "file": "/src/data/editable/ctf.json",
