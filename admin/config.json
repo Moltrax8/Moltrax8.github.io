@@ -623,6 +623,96 @@
           ]
         },
         {
+          "name": "services",
+          "label": "Services page",
+          "file": "/src/data/editable/services.json",
+          "format": "json",
+          "preview_path": "/services/",
+          "fields": [
+            {
+              "name": "eyebrow",
+              "label": "Small heading",
+              "widget": "string",
+              "required": false
+            },
+            {
+              "name": "title",
+              "label": "Page title",
+              "widget": "string"
+            },
+            {
+              "name": "description",
+              "label": "Introduction",
+              "widget": "text"
+            },
+            {
+              "name": "services",
+              "label": "Service cards (keep both cards)",
+              "widget": "list",
+              "min": 2,
+              "max": 2,
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "Service type (keep one of each)",
+                  "widget": "select",
+                  "options": [
+                    {
+                      "label": "Hosting",
+                      "value": "hosting"
+                    },
+                    {
+                      "label": "Development",
+                      "value": "development"
+                    }
+                  ]
+                },
+                {
+                  "name": "visible",
+                  "label": "Show card",
+                  "widget": "boolean",
+                  "default": true
+                },
+                {
+                  "name": "category",
+                  "label": "Small card label",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "title",
+                  "widget": "string"
+                },
+                {
+                  "name": "description",
+                  "widget": "text"
+                },
+                {
+                  "name": "features",
+                  "label": "What is included",
+                  "widget": "list",
+                  "min": 1,
+                  "field": {
+                    "name": "feature",
+                    "widget": "string"
+                  }
+                },
+                {
+                  "name": "buttonLabel",
+                  "label": "Telegram button text",
+                  "widget": "string"
+                }
+              ]
+            },
+            {
+              "name": "closingNote",
+              "label": "Note below cards",
+              "widget": "text",
+              "required": false
+            }
+          ]
+        },
+        {
           "name": "competitions_page",
           "label": "Competitions page",
           "file": "/src/data/editable/competitions-page.json",
